@@ -1,0 +1,16 @@
+.container {
+  h2 {
+    font-size: 26px;
+    line-height: 32px;
+
+    color: #232639;
+  }
+
+  .product-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 24px;
+  }
+}

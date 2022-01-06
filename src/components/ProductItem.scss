@@ -1,0 +1,50 @@
+.product {
+  position: relative;
+
+  width: 255px;
+  height: 255px;
+
+  background-position-x: center;
+  background-size: cover;
+
+  border-radius: 8px;
+
+  transition: all 0.2s ease-in-out;
+
+  .product-info {
+    position: absolute;
+
+    width: 100%;
+    bottom: 0px;
+
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0px 0px 8px 8px;
+
+    padding: 10px;
+
+    transition: all 0.2s ease-in-out;
+    h4 {
+      font-size: 19px;
+      line-height: 20px;
+      color: white;
+
+      margin: 0;
+      padding: 0;
+    }
+
+    span {
+      font-size: 15px;
+      line-height: 20px;
+      color: white;
+
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &:hover {
+    .product-info {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
