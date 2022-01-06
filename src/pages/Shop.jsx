@@ -11,16 +11,29 @@ const Shop = () => {
 
   const [products, setProducts] = useState([]);
 
+  const filterData = (data) => {
+    let obj = {}
+    data.reverse().forEach(item => obj[item.id] = item)
+    const resArr = Object.values(obj)
+  
+    resArr.sort((a, b) => {
+      const p1 = a.live_status === 'live' ? 1 : 0;
+      const p2 = b.live_status === 'live' ? 1 : 0;
+      return p2 - p1
+    })
+  
+    return resArr
+  }
+
   const fetchData = async () => {
     const res = await axios.get(`https://node-merchant.herokuapp.com/api/merchants`)
 
-    console.log(res.data)
-    setProducts(res.data)
+    setProducts(filterData(res.data))
   }
 
   useEffect(() => {
     fetchData();
-  }, [])
+  }, []) //eslint-disable-line
 
   return (
     <MainLayout>
