@@ -12,7 +12,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const res = await axios.get(`http://127.0.0.1:3030/api/merchants`)
+    const res = await axios.get(`https://node-merchant.herokuapp.com/api/merchants`)
 
     console.log(res.data)
     setProducts(res.data)
