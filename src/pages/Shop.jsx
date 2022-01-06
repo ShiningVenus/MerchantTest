@@ -14,8 +14,9 @@ const Shop = () => {
   const filterData = (data) => {
     let obj = {}
     data.reverse().forEach(item => {
-      if(obj[item.id] == null || obj[item.id] === 'coming_soon')
+      if(obj[item.id] == null || obj[item.id] === 'coming_soon'){
         obj[item.id] = item
+      }
     })
     const resArr = Object.values(obj)
   
